@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+  <!--
+   Project to practice JavaScript slides with photos. 
+   Author: Karie Funk
+
+--> 
+<html>
+    <head>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    </head>
+
+<!--CSS-->
+
+<style>
+        
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+        
+.image {
+  opacity: 6;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .1s ease;
+  backface-visibility: hidden;
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+
+.image:hover{
+    -ms-transform: scale(1.0); /* IE 9 */
+    -webkit-transform: scale(1.0); /* Safari 3-8 */
+    transform: scale(1.0); 
+    
+    
+    
+}
+
+h1 {
+    font-family: 'pacifico', cursive; 
+    text-align: center;
+    font-size: 75px;
+}
+        
+        
+nav.horizontal{
+	padding-top: 5px;
+	margin-bottom: 40px;
+    height: 70px;
+    width: 100%;
+    background-color: white;
+    margin-left: 10%;
+	
+}
+
+nav.horizontal li {
+   
+    font-size: 16px;
+   
+    line-height: 30px;
+    width: 180px;
+    display: block;
+    float: left;
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+	font-family: helvetica, sans-serif;
+	
+}
+
+nav.horizontal li a {
+    display: block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    
+    
+     
+   
+}
+
+nav.horizontal li a:hover {
+   
+    color: #ADDE5C;
+    
+}
+
+        
+.row {
+
+display: flex;
+flex-wrap: wrap;
+padding-left: 190px;
+
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+ 
+}
+
+
+    
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+
+
+
+.column img {
+    
+    width: 290px;
+    height: 330px;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+        
+
+.zoom {
+   
+ 
+    transition: transform .2s;
+    width: 10px;
+    height: 10px;
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+} 
+        
+footer address {
+   clear: right;
+   border-top: 1px solid black;
+   text-align: center;
+   font-style: normal;
+   font-family: sans-serif;
+   padding-top: 5px;
+  margin-top: 100px;
+}
+        
+.horizontal .current{
+    color: lightcoral;
+    
+}
+        
+.horizontal .current:hover{
+    color: lightcoral;
+    
+}
+     
+
+    
+    </style>
+
+<!--HTML-->
+<body>
+<h1>Our Selection</h1>
+    
+    <nav class="horizontal">   
+			<ul>
+				<li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="current" href="selection.html">Selection</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				
+			</ul>
+		</nav>
+    <div class="row"> 
+  <div class="column" class="image">
+    <img src="selection_photos/flower1.jpg" class="zoom">
+    <img src="selection_photos/flower2.jpg" class="zoom">
+    <img src="selection_photos/flower3.jpg" class="zoom">
+    <img src="selection_photos/flower4.jpg" class="zoom">
+    <img src="selection_photos/flower5.jpg" class="zoom">
+    <img src="selection_photos/flower6.jpg" class="zoom">
+    <img src="selection_photos/flower7.jpg" class="zoom">
+    <img src="selection_photos/flower8.jpg" class="zoom">
+    <img src="selection_photos/flower9.jpg" class="zoom">
+    <img src="selection_photos/flower10.jpg" class="zoom">
+    <img src="selection_photos/flower11.jpg" class="zoom">
+    <img src="selection_photos/flower13.jpg" class="zoom">
+
+    
+    
+  </div>
+</div>
+    
+<!--JAVASCRIPT-->
+    
+    <script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+    
+</body>
+
+
+	
+<footer>
+        <address>
+          <b>
+          © KNF Design &nbsp;&bull;&nbsp;
+            2019 &nbsp;&bull;&nbsp;
+            Photo attribution: Unsplash.com & Pixabay.com
+            </b>
+        </address>
+     </footer>	
+
+
+</html>

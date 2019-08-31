@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+ <!--
+   Project to practice JavaScript slides with photos. 
+   Author: Karie Funk
+
+--> 
+<head>
+ <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+</head>
+  
+<!--CSS-->
+
+<style>
+    
+body{
+  
+  overflow: hidden;
+}
+    
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+    
+    
+h1{
+    
+ font-family: 'pacifico', helvetica;   
+ font-size: 500%;  
+text-align: center;
+
+
+
+}
+    
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  width: 600px;
+}
+
+
+    
+
+  nav.horizontal {
+	padding-top: 5px;
+	margin-bottom: 40px;
+  height: 70px;
+  width: 100%;
+  background-color: white;
+  margin-left: 10%;
+	
+}
+
+nav.horizontal li {
+   
+    font-size: 16px;
+   
+    line-height: 30px;
+    width: 180px;
+    display: block;
+    float: left;
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+	font-family: helvetica, sans-serif;
+	
+}
+
+nav.horizontal li a {
+    display: block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    
+    
+     
+   
+}
+
+nav.horizontal li a:hover {
+    
+  
+    color: #ADDE5C;
+    
+}
+
+.horizontal .current{
+    color: lightcoral;
+    
+}
+        
+.horizontal .current:hover{
+    color: lightcoral;
+    
+}
+       
+
+article{
+    
+
+height: 350px;
+margin-top: 10px; 
+
+    
+}
+
+    
+ .perf p{
+padding-top: 25px;
+font-family: 'Quicksand', helvetica;
+align-content: center;
+font-size: 22px;
+line-height: 40px;
+text-align: justify;
+text-justify: inter-word;
+width:800px;
+margin-left: 225px;
+
+}
+    
+
+
+
+
+    
+  footer address {
+   clear: right;
+   border-top: 1px solid black;
+   text-align: center;
+   font-style: normal;
+   font-family: sans-serif;
+   padding-top:5px;
+ 
+   
+    
+}
+    
+    
+    
+</style>
+    
+<!--HTML-->
+
+<body>
+    
+<h1>Weddings & Events</h1>
+    
+<nav class="horizontal">   
+			<ul>
+				<li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a  href="selection.html">Selection</a></li>
+				<li><a class="current" href="contact.html">Contact</a></li>
+				
+			</ul>
+		</nav>
+
+<div class="slideshow-container">
+
+ 
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="images/weddings.jpg" style="width:100%"  height="450px">
+   
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="images/weddings2.jpg" style="width:100%"  height="450px">
+    
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="images/weddings3.jpg" style="width:100%" height="450px">
+    
+  </div>
+    
+    <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="images/weddings4.jpg" style="width:100%" height="450px">
+    
+  </div>
+    
+    
+    <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="images/weddings5.jpg" style="width:100%" height="450px">
+    </div>
+
+</div>
+
+<article class="perf">
+<p>Do you picture the perfect wedding in your head? With colorful flowers of all varieties? 
+  We can certainly help with that! We specialize in arranging beautiful bouquets and all kinds 
+  of flowers that will capture the eye of anyone and make your wedding unforgettable. We believe 
+  that flowers are an amazing part of life and that weddings are too! They go together like two 
+  peas in a pod! Contact us to help with your wedding needs. We would love to help!  </p>       
+        
+</article>
+    
+    
+
+ 
+
+ 
+    
+    
+<!--JAVASCRIPT AUTOMATIC SLIDE-->  
+    
+<script>
+ 
+    
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 6000); // Change image every 6 seconds
+}
+    
+    
+    
+
+</script>
+        
+
+   
+        <footer>
+            <address>
+              <b>
+              © KNF Design &nbsp;&bull;&nbsp;
+                2019 &nbsp;&bull;&nbsp;
+                Photo attribution: Unsplash.com & Pixabay.com
+                </b>
+            </address>
+         </footer>	
+    
+</body>
+    
+    
+ 
+
+        
+
+
+
+
+</html>
